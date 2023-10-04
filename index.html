@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="asset/img/favicon-32x32.png" />
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>Life's Quality</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="header">
+            <h1 class="title">CITY LIVING INDEX🌎</h1>
+            <p class="subtitle">Enter a city name to see its quality of life</p>
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    placeholder="e.g. Los Angeles" 
+                    id="cityInput"
+                />
+                <button id="searchButton">
+                    <img src="https://cdn-icons-png.flaticon.com/512/758/758651.png" alt="" class="search"/>
+                </button>
+            </div>
+        </div>
+        <!--LOADER - RENDERED DURING THE API CALL-->
+        <div id="loader" class="loader"></div>
+        <!--ERROR MESSAGE - RENDERED IF THE API CALL IS NOT SUCCESFULL-->
+        <div id="error" class="error"></div>
+        <!--RENDERED IF THE API CALL IS SUCCESFUL-->
+        <div id="resultContainer" class="resultContainer">
+            <div class="scores">
+                <h2 class="scores-title">Teleport Scores</h2>
+                <div class="category-cards" id="cards"></div>
+                <div class="total">
+                    <h2 class="total-title">Total Score: </h2>
+                    <div class="total-result" id="result-text"></div>
+                </div>
+                <div class="border"></div>
+            </div>
+            <div class="summary">
+                <h2 class="summary-title">Summary</h2>
+                <div class="summary-text" id="summary-text"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="asset/js/index.js"></script>
+</body>
+</html>
